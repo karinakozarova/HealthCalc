@@ -39,17 +39,6 @@ const template = [
     ]
   },
   {
-    role: 'window',
-    submenu: [
-      {
-        role: 'minimize'
-      },
-      {
-        role: 'close'
-      }
-    ]
-  },
-  {
     role: 'help',
     submenu: [
       {
@@ -69,7 +58,18 @@ const template = [
         click () { require('electron').shell.openExternal('http://www.nhs.uk/chq/pages/1126.aspx?categoryid=51') }
       }
     ]
-  }
+  },
+  {
+    role: 'window',
+    submenu: [
+      {
+        role: 'minimize'
+      },
+      {
+        role: 'close'
+      }
+    ]
+  },
 ]
 
 if (process.platform === 'darwin') {
