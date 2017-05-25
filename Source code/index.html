@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title> HelathCalc </title>
+		<title> HealthCalc </title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<style>
@@ -57,7 +57,7 @@
 		<h1>
 			<center> HealthCalc </center>
 		</h1> <br>
-		<p style=m argin: "10px"> This app will help you calculate everything you need for a health lifestyle - from BMI to daily calorie intake. Let's get started. What do you want to calculate?
+		<p style=margin: "10px"> This app will help you calculate everything you need for a health lifestyle - from BMI to daily calorie intake. Let's get started. What do you want to calculate?
 			<p>
 
 
@@ -77,33 +77,38 @@
 				<p id="text-box"> Height: </p> <input type="num" id="height"> </input>
 				<p id="text-box"> Weight: </p> <input type="num" id="weight"> </input>
 
-				<br> <br> <button id="button_indent" onclick="Calculate()">Calculate</button>
+				<br> <br> <button id="button_indent" onclick="Calculate()"> Calculate </button>
 
 				<script>
 					function Calculate()
 					{
-						//is it male or female
+						// variables assignment
 						var sex; // sex = 1 is male, 2 is female
 						var height = document.getElementById("height").value;
 						var weight = document.getElementById("weight").value;
-						var BMI = weight/(height*height)*10000;
-						BMI = Math.round( BMI);
 
-						alert("BMI: " + BMI);
+						// BMI calculation
+						var BMI = weight / (height * height) * 10000;
+						BMI = Math.round(BMI);
+
+						//checking user input
 						if (document.getElementById("sex_female").checked == true) sex = 2;
 						if (document.getElementById("sex_male").checked == true) sex = 1;
 						if (document.getElementById("age").value > 0 && document.getElementById("age").value <= 120)
 						{
-							//LEGIT INPUT   
+
 							if (height > 55 && height < 290)
 							{
 								if (weight > 15 && weight < 290)
-								{
-									alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex + "BMI: " + BMI);
+								{ 
+									//if here -> everything from the input is legit
+									// For debugging only: 
+									//alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex + "BMI: " + BMI);
+									alert("Your BMI is " + BMI + ". The normal BMI is >= 19 and <= 25");
 								}
-								else alert("Wrong weight input");
+								else alert("Wrong weight input, please try again");
 							}
-							else alert("Wrong height input, please use cm");
+							else alert("Wrong height input, please try again");
 						}
 						else alert("Invalid age input, please try again");
 					}
