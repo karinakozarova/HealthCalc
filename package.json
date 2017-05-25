@@ -1,0 +1,16 @@
+{
+  "name": "HealthCalc",
+  "version": "1.0.0",
+  "productName": "HealthCalc",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Karina Kozarova",
+  "license": "CC BY-NC 2.0",
+  "devDependencies": {
+    "electron": "^1.6.8"
+  }
+}
