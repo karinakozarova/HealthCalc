@@ -29,6 +29,8 @@
 				font-size: 20px;
 				color: white;
 				text-indent: 50px;
+				margin-left: 15px;
+				margin-right: 15px;
 			}
 
 			div.sex {
@@ -149,7 +151,7 @@
 						//If you do a lot of sports, you multiply by 1.95. very hard exercise everyday
 						if (activity_lvl == 8) calorie_intake = BMR * 1.95;
 						
-						alert(calorie_intake);
+						// alert(calorie_intake);  //use only when debugging
 						//checking user input
 						if (document.getElementById("sex_female").checked == true) sex = 2;
 						if (document.getElementById("sex_male").checked == true) sex = 1;
@@ -163,7 +165,7 @@
 									//if here -> everything from the input is legit
 									// For debugging only: 
 									//alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex + "BMI: " + BMI);
-									alert("Your BMI is " + BMI + ". The normal BMI is >= 19 and <= 25\n" + "Your BMR is: " + BMR);
+									alert("Your BMI is " + BMI + ".\n" + "Your BMR is: " + BMR + ".\nYour calorie intake should be: " + calorie_intake);
 								}
 								else alert("Wrong weight input, please try again");
 							}
