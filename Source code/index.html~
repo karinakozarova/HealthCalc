@@ -64,14 +64,13 @@
 				<p> I am: </p>
 				<div class="sex">
 					<label>
-       						 <input type="radio" name="optionsRadios" id="sex_female" value="female">
-        							Female
-      				</label>
-				
+        <input type="radio" name="optionsRadios" id="sex_female" value="female">
+        Female
+      </label>
 					<label>
-   	     					<input type="radio" name="optionsRadios" id="sex_male" value="male">
-     							   Male
-    				</label>
+        <input type="radio" name="optionsRadios" id="sex_male" value="male">
+        Male
+      </label>
 				</div>
 
 				<p id="text-box"> Age: </p> <input type="num" id="age"> </input> <br>
