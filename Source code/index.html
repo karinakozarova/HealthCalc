@@ -84,14 +84,19 @@
 					function Calculate()
 					{
 						// variables assignment
-						var sex; // sex = 1 is male, 2 is female
+						var sex = 1; // sex = 1 is male, 2 is female
 						var height = document.getElementById("height").value;
 						var weight = document.getElementById("weight").value;
-
+						var age = document.getElementById("age").value;
 						// BMI calculation
 						var BMI = weight / (height * height) * 10000;
 						BMI = Math.round(BMI);
 
+						// BMR calculation
+						var BMR;
+						if (sex == 1) BMR = 10 * weight + 6.25 * height - 5 * age + 5         //man
+						else BMR = 10 * weight + 6.25 * height - 5 * age - 161     			//woman
+						
 						//checking user input
 						if (document.getElementById("sex_female").checked == true) sex = 2;
 						if (document.getElementById("sex_male").checked == true) sex = 1;
@@ -105,7 +110,7 @@
 									//if here -> everything from the input is legit
 									// For debugging only: 
 									//alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex + "BMI: " + BMI);
-									alert("Your BMI is " + BMI + ". The normal BMI is >= 19 and <= 25");
+									alert("Your BMI is " + BMI + ". The normal BMI is >= 19 and <= 25\n" + "Your BMR is: " + BMR);
 								}
 								else alert("Wrong weight input, please try again");
 							}
