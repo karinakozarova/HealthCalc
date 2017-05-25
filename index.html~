@@ -86,10 +86,7 @@
 						var sex; // sex = 1 is male, 2 is female
 						var height = document.getElementById("height").value;
 						var weight = document.getElementById("weight").value;
-						var BMI = weight/(height*height)*10000;
-						BMI = Math.round( BMI);
 
-						alert("BMI: " + BMI);
 						if (document.getElementById("sex_female").checked == true) sex = 2;
 						if (document.getElementById("sex_male").checked == true) sex = 1;
 						if (document.getElementById("age").value > 0 && document.getElementById("age").value <= 120)
@@ -99,13 +96,14 @@
 							{
 								if (weight > 15 && weight < 290)
 								{
-									alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex + "BMI: " + BMI);
+									alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex);
 								}
 								else alert("Wrong weight input");
 							}
 							else alert("Wrong height input, please use cm");
 						}
 						else alert("Invalid age input, please try again");
+
 					}
 				</script>
 	</body>
