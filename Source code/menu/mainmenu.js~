@@ -3,7 +3,38 @@ const electron = require('electron')
 const app = electron.app
 
 const template = [
-
+  {
+    label: 'Edit',
+    submenu: [
+      {
+        role: 'undo'
+      },
+      {
+        role: 'redo'
+      },
+      {
+        type: 'separator'
+      },
+      {
+        role: 'cut'
+      },
+      {
+        role: 'copy'
+      },
+      {
+        role: 'paste'
+      },
+      {
+        role: 'pasteandmatchstyle'
+      },
+      {
+        role: 'delete'
+      },
+      {
+        role: 'selectall'
+      }
+    ]
+  },
   {
     label: 'View',
     submenu: [
@@ -36,6 +67,9 @@ const template = [
       {
         type: 'separator'
       },
+      {
+        role: 'togglefullscreen'
+      }
     ]
   },
   {
