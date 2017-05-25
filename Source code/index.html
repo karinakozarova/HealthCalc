@@ -48,6 +48,11 @@
 			#text-box {
 				margin-top: 3%;
 			}
+			div.active-lvl {
+				margin-left : 50px;
+				margin-riht: 5px;
+				
+			}
 		</style>
 
 	</head>
@@ -73,6 +78,27 @@
      							   Male
     				</label>
 				</div>
+				<br>
+				<p> I train: </p>
+				<div class="active-lvl">
+					<label>
+       						 <input type="radio" name="optionsRadios" id="sex_female" value="female">
+        							1-3 times per week
+      				</label>
+				
+					<label>
+   	     					<input type="radio" name="optionsRadios" id="sex_male" value="male">
+     							   3-5 times per week 
+    				</label>
+    				<label>
+       						 <input type="radio" name="optionsRadios" id="sex_female" value="female">
+        							6-7 times per week
+      				</label>
+      				<label>
+       						 <input type="radio" name="optionsRadios" id="sex_female" value="female">
+        							more than 7 times 
+      				</label>
+				</div>
 
 				<p id="text-box"> Age: </p> <input type="num" id="age"> </input> <br>
 				<p id="text-box"> Height: </p> <input type="num" id="height"> </input>
@@ -88,14 +114,27 @@
 						var height = document.getElementById("height").value;
 						var weight = document.getElementById("weight").value;
 						var age = document.getElementById("age").value;
+						
 						// BMI calculation
 						var BMI = weight / (height * height) * 10000;
 						BMI = Math.round(BMI);
 
 						// BMR calculation
+						//This is based on the Mifflin - St Jeor equation. 
 						var BMR;
 						if (sex == 1) BMR = 10 * weight + 6.25 * height - 5 * age + 5         //man
 						else BMR = 10 * weight + 6.25 * height - 5 * age - 161     			//woman
+						
+						// Needeed calorie intake 
+						var calorie_intake;
+						//If you are not very active basal metabolic rate times 1.2. 	 1-3 times exercise
+						calorie_intake = BMR * 1.2;
+						//Somewhat active people should multiply by 1.375.  3-5
+						calorie_intake = BMR * 1.375;
+						//Some exercise during the week, the number is 1.55. 6-7
+						calorie_intake = BMR * 1.55;
+						//If you do a lot of sports, you multiply by 1.95. very hard exercise everyday
+						calorie_intake = BMR * 1.95;
 						
 						//checking user input
 						if (document.getElementById("sex_female").checked == true) sex = 2;
