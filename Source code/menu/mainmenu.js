@@ -55,6 +55,18 @@ const template = [
       {
         label: 'Learn More',
         click () { require('electron').shell.openExternal('http://electron.atom.io') }
+      },
+      {
+        label: 'BMI',
+        click () { require('electron').shell.openExternal('https://www.cdc.gov/healthyweight/assessing/bmi/') }
+      },
+      {
+        label: 'BMR',
+        click () { require('electron').shell.openExternal('https://en.wikipedia.org/wiki/Basal_metabolic_rate') }
+      },
+      {
+        label: 'Daily Calorie Intake',
+        click () { require('electron').shell.openExternal('http://www.nhs.uk/chq/pages/1126.aspx?categoryid=51') }
       }
     ]
   }
