@@ -1,0 +1,41 @@
+body {
+				background-color: #94e587;
+			}
+
+			h1 {
+
+				color: white;
+				text-align: center;
+			}
+
+			p {
+				font-family: verdana;
+				font-size: 20px;
+				color: white;
+				text-indent: 50px;
+				margin-left: 15px;
+				margin-right: 15px;
+			}
+
+			div.sex {
+				text-indent: 50px;
+			}
+			
+			div.active-lvl {
+				margin-left: 50px;
+				margin-right: 5px;
+			}
+		
+			#age,
+			#height,
+			#weight {
+				margin-left: 23%;
+			}
+
+			#button_indent {
+				margin-left: 40%;
+			}
+
+			#text-box {
+				margin-top: 3%;
+			}
