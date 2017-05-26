@@ -1,4 +1,4 @@
-			/* palettes to use: 
+/* palettes to use: 
                 	#34e587	(52,229,135)
                     #64e587	(100,229,135)
                     #94e587	(148,229,135)
@@ -7,19 +7,18 @@
             */
 			body {
 				background-color: #94e587;
-				font-family: lucida;
 			}
 
 			h1 {
 
 				color: white;
 				text-align: center;
-				text-style: italic;
 			}
 
 			p {
+				font-family: verdana;
 				font-size: 20px;
-				//color: white;
+				color: white;
 				text-indent: 50px;
 				margin-left: 15px;
 				margin-right: 15px;
@@ -30,7 +29,8 @@
 			}
 			
 			div.active-lvl {
-				margin-left: 70px;
+				margin-left: 50px;
+				margin-right: 5px;
 			}
 		
 			#age,
@@ -38,11 +38,9 @@
 			#weight {
 				margin-left: 23%;
 			}
-			
+
 			#button_indent {
-				margin-left: 40%-29px;
-				 padding: 15px 144px;
-				 font-size: 25px;
+				margin-left: 40%;
 			}
 
 			#text-box {
