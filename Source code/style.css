@@ -49,11 +49,15 @@
 				margin-top: 3%;
 			}
 			
+			#main_screen_pic{
+			 max-width: 100%;
+				height: auto;
+}
 			
 			.btn-arrow-right {
 				position: relative;
 				padding-left: 20px;
-				padding-right: 60px;
+				padding-right: 50px;
 			}
 
 			.btn-arrow-right:before,
