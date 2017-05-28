@@ -9,9 +9,11 @@ function calculate()
             //finding if user is male or female
          	if (document.getElementById("sex_female").checked === true) {
          	    sex = 2;
-         	} else if (document.getElementById("sex_male").checked === true){
+         	}
+         	if (document.getElementById("sex_male").checked === true){
          	    sex = 1;
-         	} else{
+         	} 
+         	if(document.getElementById("sex_female").checked === false && document.getElementById("sex_male").checked === false ){
          	    alert("Enter gender!");
          	    calculations(); // reccursion
          	}
@@ -52,11 +54,7 @@ function calculate()
          	{
          		if (height > 55 && height < 290)
          		{
-         			if (weight > 15 && weight < 290)
-         			{
-         		        //if here -> everything from the input is legit
-         				//For debugging only: 
-         				//alert("Age:  " + document.getElementById("age").value + " Sex:  " + sex + "BMI: " + BMI);
+         			if (weight > 15 && weight < 290){
          		        alert("Your BMI is " + BMI + ".\n" + "Your BMR is: " + BMR + ".\nYour calorie intake should be: " + calorie_intake);
          			} else alert("Wrong weight input, please try again");
          			
