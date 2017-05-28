@@ -1,125 +1,125 @@
-const {Menu} = require('electron')
-const electron = require('electron')
+const {Menu} = require("electron")
+const electron = require("electron")
 const app = electron.app
 
 const template = [
 
   {
-    label: 'View',
+    label: "View",
     submenu: [
       {
-        label: 'Reload',
-        accelerator: 'CmdOrCtrl+R',
+        label: "Reload",
+        accelerator: "CmdOrCtrl+R",
         click (item, focusedWindow) {
           if (focusedWindow) focusedWindow.reload()
         }
       },
       {
-        label: 'Toggle Developer Tools',
-        accelerator: process.platform === 'darwin' ? 'Alt+Command+I' : 'Ctrl+Shift+I',
+        label: "Toggle Developer Tools",
+        accelerator: process.platform === "darwin" ? "Alt+Command+I" : "Ctrl+Shift+I",
         click (item, focusedWindow) {
           if (focusedWindow) focusedWindow.webContents.toggleDevTools()
         }
       },
       {
-        type: 'separator'
+        type: "separator"
       },
       {
-        role: 'resetzoom'
+        role: "resetzoom"
       },
       {
-        role: 'zoomin'
+        role: "zoomin"
       },
       {
-        role: 'zoomout'
+        role: "zoomout"
       },
       {
-        type: 'separator'
+        type: "separator"
       },
     ]
   },
   {
-    role: 'help',
+    role: "help",
     submenu: [
       {
-        label: 'Learn More',
-        click () { require('electron').shell.openExternal('http://electron.atom.io') }
+        label: "Learn More",
+        click () { require("electron").shell.openExternal("http://electron.atom.io") }
       },
       {
-        label: 'BMI',
-        click () { require('electron').shell.openExternal('https://www.cdc.gov/healthyweight/assessing/bmi/') }
+        label: "BMI",
+        click () { require("electron").shell.openExternal("https://www.cdc.gov/healthyweight/assessing/bmi/") }
       },
       {
-        label: 'BMR',
-        click () { require('electron').shell.openExternal('https://en.wikipedia.org/wiki/Basal_metabolic_rate') }
+        label: "BMR",
+        click () { require("electron").shell.openExternal("https://en.wikipedia.org/wiki/Basal_metabolic_rate") }
       },
       {
-        label: 'Daily Calorie Intake',
-        click () { require('electron').shell.openExternal('http://www.nhs.uk/chq/pages/1126.aspx?categoryid=51') }
+        label: "Daily Calorie Intake",
+        click () { require("electron").shell.openExternal("http://www.nhs.uk/chq/pages/1126.aspx?categoryid=51")}
       }
     ]
   },
   {
-    role: 'window',
+    role: "window",
     submenu: [
       {
-        role: 'minimize'
+        role: "minimize"
       },
       {
-        role: 'close'
+        role: "close"
       }
     ]
   },
 ]
 
-if (process.platform === 'darwin') {
+if (process.platform === "darwin") {
   const name = app.getName()
   template.unshift({
     label: name,
     submenu: [
       {
-        role: 'about'
+        role: "about"
       },
       {
-        type: 'separator'
+        type: "separator"
       },
       {
-        role: 'services',
+        role: "services",
         submenu: []
       },
       {
-        type: 'separator'
+        type: "separator"
       },
       {
-        role: 'hide'
+        role: "hide"
       },
       {
-        role: 'hideothers'
+        role: "hideothers"
       },
       {
-        role: 'unhide'
+        role: "unhide"
       },
       {
-        type: 'separator'
+        type: "separator"
       },
       {
-        role: 'quit'
+        role: "quit"
       }
     ]
   })
   // Edit menu.
   template[1].submenu.push(
     {
-      type: 'separator'
+      type: "separator"
     },
     {
-      label: 'Speech',
+      label: "Speech",
       submenu: [
         {
-          role: 'startspeaking'
+          role: "startspeaking"
         },
         {
-          role: 'stopspeaking'
+          role: "stopspeaking"
         }
       ]
     }
@@ -127,25 +127,25 @@ if (process.platform === 'darwin') {
   // Window menu.
   template[3].submenu = [
     {
-      label: 'Close',
-      accelerator: 'CmdOrCtrl+W',
-      role: 'close'
+      label: "Close",
+      accelerator: "CmdOrCtrl+W",
+      role: "close"
     },
     {
-      label: 'Minimize',
-      accelerator: 'CmdOrCtrl+M',
-      role: 'minimize'
+      label: "Minimize",
+      accelerator: "CmdOrCtrl+M",
+      role: "minimize"
     },
     {
-      label: 'Zoom',
-      role: 'zoom'
+      label: "Zoom",
+      role: "zoom"
     },
     {
-      type: 'separator'
+      type: "separator"
     },
     {
-      label: 'Bring All to Front',
-      role: 'front'
+      label: "Bring All to Front",
+      role: "front"
     }
   ]
 }
