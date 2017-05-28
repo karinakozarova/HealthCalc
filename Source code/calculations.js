@@ -61,5 +61,5 @@ function calculate()
          		} else alert("Wrong height input, please try again");
          		
          	} else alert("Invalid age input, please try again");
-         	
+         	return 0; //success
          }
