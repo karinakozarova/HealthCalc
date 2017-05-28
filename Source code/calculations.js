@@ -7,9 +7,9 @@ function calculate()
          	var age = document.getElementById("age").value;
          
             //finding if user is male or female
-         	if (document.getElementById("sex_female").checked == true) {
+         	if (document.getElementById("sex_female").checked === true) {
          	    sex = 2;
-         	} else if (document.getElementById("sex_male").checked == true){
+         	} else if (document.getElementById("sex_male").checked === true){
          	    sex = 1;
          	} else{
          	    alert("Enter gender!");
@@ -23,7 +23,7 @@ function calculate()
          	//BMR calculation
          	//This is based on the Mifflin - St Jeor equation. 
          	var BMR;
-         	if (sex == 1) {
+         	if (sex === 1) {
          	    BMR = 10 * weight + 6.25 * height - 5 * age + 5; //man
          	}
          	else {
@@ -33,13 +33,13 @@ function calculate()
          	//Needeed calorie intake based on the activity level calculations
          	var calorie_intake;
          	
-         	if (document.getElementById("rarely").checked == true) {
+         	if (document.getElementById("rarely").checked === true) {
          	    calorie_intake = BMR * 1.2;
-         	} else if (document.getElementById("often").checked == true){
+         	} else if (document.getElementById("often").checked === true){
          	    calorie_intake = BMR * 1.375;
-         	} else if (document.getElementById("very-often").checked == true){
+         	} else if (document.getElementById("very-often").checked === true){
          	    calorie_intake = BMR * 1.55;
-            } else if (document.getElementById("everyday").checked == true){
+            } else if (document.getElementById("everyday").checked === true){
          	    calorie_intake = BMR * 1.95;
          	} else {
                     alert("If you don't enter your training activity, we can't calculate your calorie intake.");
