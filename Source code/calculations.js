@@ -1,4 +1,4 @@
-function Calculate()
+function calculate()
          {
          	//variables assignment
          	var sex = 1; // sex = 1 is male, 2 is female
@@ -13,7 +13,7 @@ function Calculate()
          	    sex = 1;
          	} else{
          	    alert("Enter gender!");
-         	    Calculations(); // reccursion
+         	    calculations(); // reccursion
          	}
          	
          	//BMI calculation
