@@ -1,18 +1,11 @@
 function calculate()
          {
          	//variables assignment
-         	var sex = 1; // sex = 1 is male, 2 is female
          	var height = document.getElementById("height").value;
          	var weight = document.getElementById("weight").value;
          	var age = document.getElementById("age").value;
          
-            //finding if user is male or female
-         	if (document.getElementById("sex_female").checked === true) {
-         	    sex = 2;
-         	}
-         	if (document.getElementById("sex_male").checked === true){
-         	    sex = 1;
-         	} 
+        
          	if(document.getElementById("sex_female").checked === false && document.getElementById("sex_male").checked === false ){
          	    alert("Enter gender!");
          	    calculations(); // reccursion
@@ -25,7 +18,7 @@ function calculate()
          	//BMR calculation
          	//This is based on the Mifflin - St Jeor equation. 
          	var BMR;
-         	if (sex === 1) {
+         	if (document.getElementById("sex_male").checked === true) {
          	    BMR = 10 * weight + 6.25 * height - 5 * age + 5; //man
          	}
          	else {
