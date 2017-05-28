@@ -31,7 +31,7 @@ function Calculate()
          	}
          
          	//Needeed calorie intake based on the activity level calculations
-         	var calorie_intake;
+         	var calorie_intake;;
          	
          	if (document.getElementById("rarely").checked == true) {
          	    calorie_intake = BMR * 1.2;
