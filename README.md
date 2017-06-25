@@ -1,4 +1,6 @@
-# HealthCalc
+# HealthCalc    [![forthebadge](http://forthebadge.com/badges/built-with-love.svg)](http://forthebadge.com)
+
+
 An all-PC-OS supported app, with health calculators.
 
 The app is realized with the Electron framework, JS, HTML, CSS, Bootstrap. <br>
